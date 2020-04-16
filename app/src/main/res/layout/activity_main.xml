@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_active"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:padding="36dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <com.bitvale.switcher.SwitcherC
+            android:id="@+id/switcher_c"
+            android:layout_marginLeft="16dp"
+            android:padding="16dp"
+            android:checked="false"
+            app:elevation="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:switcher_on_color="@color/on_color"
+            app:switcher_off_color="@color/off_color"
+            app:switcher_icon_color="@color/icon_color" />
+
+        <com.bitvale.switcher.SwitcherX
+            android:id="@+id/switcher_x"
+            android:layout_marginLeft="16dp"
+            android:padding="16dp"
+            android:checked="false"
+            app:elevation="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:switcher_on_color="@color/on_color"
+            app:switcher_off_color="@color/off_color"
+            app:switcher_icon_color="@color/icon_color" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnOpenTop"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="16dp"
+        android:text="Top Navigation Bar"
+        app:layout_constraintBottom_toTopOf="@+id/btnOpenTopFloat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <Button
+        android:id="@+id/btnOpenTopFloat"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="16dp"
+        android:text="Float Top Navigation Bar"
+        app:layout_constraintBottom_toTopOf="@+id/btnOpenBottomEqual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOpenTop" />
+
+    <Button
+        android:id="@+id/btnOpenBottomEqual"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="16dp"
+        android:text="Equal Bottom Navigation Bar"
+        app:layout_constraintBottom_toTopOf="@+id/btnOpenBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOpenTopFloat" />
+
+    <Button
+        android:id="@+id/btnOpenBottom"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="16dp"
+        android:text="Bottom Navigation Bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOpenBottomEqual" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
