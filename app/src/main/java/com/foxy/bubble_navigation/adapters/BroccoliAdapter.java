@@ -82,10 +82,10 @@ public class BroccoliAdapter extends RecyclerView.Adapter<BroccoliViewHolder> {
                         return;
                     }
 
-                    holder.imageView.setImageResource(mList.get(i).imageRes);
-                    holder.tvPrice.setText("¥ "+String.valueOf(mList.get(i).price));
-                    holder.tvTitle.setText(mList.get(i).title);
-                    holder.tvDescription.setText(mList.get(i).description);
+                    holder.imageView.setImageResource(mList.get(position).imageRes);
+                    holder.tvPrice.setText("¥ "+String.valueOf(mList.get(position).price));
+                    holder.tvTitle.setText(mList.get(position).title);
+                    holder.tvDescription.setText(mList.get(position).description);
                 }
             };
             mTaskManager.put(holder.itemView, task);
