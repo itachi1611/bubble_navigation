@@ -13,36 +13,17 @@
         android:layout_height="wrap_content"
         android:background="@color/green_active"
         android:elevation="4dp"
-        android:gravity="center"
         android:padding="36dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 
-        <com.bitvale.switcher.SwitcherC
-            android:id="@+id/switcher_c"
-            android:layout_marginLeft="16dp"
-            android:padding="16dp"
-            android:checked="false"
-            app:elevation="10dp"
+        <TextView
+            android:id="@+id/tvBroccoli"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:switcher_on_color="@color/on_color"
-            app:switcher_off_color="@color/off_color"
-            app:switcher_icon_color="@color/icon_color" />
-
-        <com.bitvale.switcher.SwitcherX
-            android:id="@+id/switcher_x"
-            android:layout_marginLeft="16dp"
-            android:padding="16dp"
-            android:checked="false"
-            app:elevation="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:switcher_on_color="@color/on_color"
-            app:switcher_off_color="@color/off_color"
-            app:switcher_icon_color="@color/icon_color" />
+            android:text="Broccoli"/>
 
     </LinearLayout>
 

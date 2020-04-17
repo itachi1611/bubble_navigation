@@ -2,13 +2,6 @@ package com.foxy.bubble_navigation;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.CompoundButton;
-import android.widget.Toast;
-
-import com.bitvale.switcher.SwitcherC;
-import com.bitvale.switcher.SwitcherX;
-
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
@@ -69,48 +62,19 @@ public class MainActivity extends AppCompatActivity  {
      */
 
     /**
-     * Switcher
-     * MinSDK = 19
+     * Broccoli
      * dependencies {
-     *   implementation 'com.bitvale:switcher:1.0.9'
+     *     implementation 'me.samlss:broccoli:1.0.0'
      * }
-     * Usage:
-     * <com.bitvale.switcher.SwitcherX // or SwitcherC
-     *     android:id="@+id/switcher"
-     *     android:layout_width="wrap_content"
-     *     android:layout_height="wrap_content"
-     *     app:switcher_on_color="@color/on_color"
-     *     app:switcher_off_color="@color/off_color"
-     *     app:switcher_icon_color="@color/icon_color" />
-     * Properties:
-     * android:checked (boolean) -> default true
-     * app:switcher_on_color (color) -> default #48ea8b
-     * app:switcher_off_color (color) -> default #ff4651
-     * app:switcher_icon_color (color) -> default white
-     * app:elevation (dimension) -> default 4dp
      */
 
-    @BindView(R.id.switcher_x)
-    SwitcherX switcher_x;
-
-    @BindView(R.id.switcher_c)
-    SwitcherC switcher_c;
-
     private Unbinder unbinder;
-
-    private CompoundButton.OnCheckedChangeListener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         unbinder = ButterKnife.bind(this);
-        setOnCheckedChangeListener();
-        switcher_x.setOnCheckedChangeListener();
-    }
-
-    public void setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener listener) {
-        this.listener = listener;
     }
 
     @OnClick(R.id.btnOpenTop)
@@ -131,6 +95,11 @@ public class MainActivity extends AppCompatActivity  {
     @OnClick(R.id.btnOpenBottom)
     protected void onOpenBottom() {
         startActivity(new Intent(this, BottomBarActivity.class));
+    }
+
+    @OnClick(R.id.tvBroccoli)
+    protected void onBroccoli() {
+        startActivity(new Intent(this, BroccoliActivity.class));
     }
 
     @Override
