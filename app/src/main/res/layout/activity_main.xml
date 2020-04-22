@@ -14,7 +14,7 @@
         android:background="@color/green_active"
         android:elevation="4dp"
         android:padding="36dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
@@ -24,6 +24,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Broccoli"/>
+
+        <TextView
+            android:id="@+id/tvProgressButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Progress Button"/>
+
+        <TextView
+            android:id="@+id/tvMaterialDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Material Dialog"/>
+
+        <TextView
+            android:id="@+id/tvAnimationView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android Animations View"/>
 
     </LinearLayout>
 

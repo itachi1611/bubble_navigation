@@ -29,6 +29,12 @@ public class BroccoliAdapter extends RecyclerView.Adapter<BroccoliViewHolder> {
     private Map<View, Broccoli> mViewPlaceholderManager = new HashMap<>();
     private Map<View, Runnable> mTaskManager = new HashMap<>();
 
+    public BroccoliAdapter(List<DataBean> mList, Map<View, Broccoli> mViewPlaceholderManager, Map<View, Runnable> mTaskManager) {
+        this.mList = mList;
+        this.mViewPlaceholderManager = mViewPlaceholderManager;
+        this.mTaskManager = mTaskManager;
+    }
+
     @NonNull
     @Override
     public BroccoliViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

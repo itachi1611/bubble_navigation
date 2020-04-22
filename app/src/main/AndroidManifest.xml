@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BroccoliActivity"/>
+        <activity android:name=".TestActivity"></activity>
+        <activity android:name=".AnimationViewActivity" />
+        <activity
+            android:name=".MaterialDialogActivity"
+            android:theme="@style/MaterialTheme" />
+        <activity
+            android:name=".ProgressButtonActivity"
+            android:theme="@style/MaterialTheme" />
+        <activity android:name=".BroccoliActivity" />
         <activity android:name=".BottomBarActivity" />
         <activity android:name=".BottomBarEqualActivity" />
         <activity android:name=".TopBarFloatActivity" />

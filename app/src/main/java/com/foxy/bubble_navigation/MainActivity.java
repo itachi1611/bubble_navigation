@@ -68,6 +68,56 @@ public class MainActivity extends AppCompatActivity  {
      * }
      */
 
+    /**
+     * Progress button
+     * implementation 'com.github.razir.progressbutton:progressbutton:2.1.0'
+     */
+
+    /**
+     * dependencies {
+     *     // Material Dialog Library
+     *     implementation 'com.shreyaspatil:MaterialDialog:2.1'
+     *
+     *     // Material Design Library
+     *     implementation 'com.google.android.material:material:1.0.0'
+     *
+     *     // Lottie Animation Library
+     *     implementation 'com.airbnb.android:lottie:3.3.6'
+     * }
+     *
+     * Dialog state listerner
+     *  ...
+     *        mDialog.setOnShowListener(this);
+     *        mDialog.setOnCancelListener(this);
+     *        mDialog.setOnDismissListener(this);
+     *     }
+     *
+     *     @Override
+     *     public void onShow(DialogInterface dialogInterface) {
+     *         // Dialog is Displayed
+     *     }
+     *
+     *     @Override
+     *     public void onCancel(DialogInterface dialogInterface) {
+     *         // Dialog is Cancelled
+     *     }
+     *
+     *     @Override
+     *     public void onDismiss(DialogInterface dialogInterface) {
+     *         // Dialog is Dismissed
+     *     }
+     * }
+     */
+
+    /**
+     * Android view Animations
+     * dependencies {
+     *         compile 'com.android.support:support-compat:25.1.1'
+     *         compile 'com.daimajia.easing:library:2.0@aar'
+     *         compile 'com.daimajia.androidanimations:library:2.3@aar'
+     * }
+     */
+
     private Unbinder unbinder;
 
     @Override
@@ -100,6 +150,19 @@ public class MainActivity extends AppCompatActivity  {
     @OnClick(R.id.tvBroccoli)
     protected void onBroccoli() {
         startActivity(new Intent(this, BroccoliActivity.class));
+    }
+
+    @OnClick(R.id.tvProgressButton)
+    protected void onProgressButton() { startActivity(new Intent(this, ProgressButtonActivity.class));}
+
+    @OnClick(R.id.tvMaterialDialog)
+    protected void onMaterialDialog() {
+        startActivity(new Intent(this, MaterialDialogActivity.class));
+    }
+
+    @OnClick(R.id.tvAnimationView)
+    protected void onAnimationView() {
+        startActivity(new Intent(this, AnimationViewActivity.class));
     }
 
     @Override

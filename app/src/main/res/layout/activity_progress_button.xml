@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ProgressButtonActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAnimatedDrawable"
+            style="@style/DefaultButtonStyle"
+            android:text="@string/animatedDrawable"
+            android:textColor="@color/stateful_text_color"
+            app:backgroundTint="@color/orange"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonProgressMixed"
+            style="@style/DefaultButtonStyle"
+            android:text="@string/mixedBehaviour"
+            app:backgroundTint="@color/pink" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonProgressRightText"
+            style="@style/DefaultButtonStyle"
+            android:layout_marginTop="@dimen/buttonsMargin"
+            android:text="@string/progressRight"
+            app:backgroundTint="@color/green"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonProgressLeftText"
+            style="@style/DefaultButtonStyle"
+            android:layout_marginTop="@dimen/buttonsMargin"
+            android:text="@string/progressLeft"
+            android:textAllCaps="true"
+            android:textColor="@color/stateful_text_color"
+            app:backgroundTint="@color/blueGrey"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonProgressCenter"
+            style="@style/DefaultButtonStyle"
+            android:layout_marginTop="@dimen/buttonsMargin"
+            android:text="@string/progressCenter"
+            app:backgroundTint="@color/orange" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonProgressCustomStyle"
+            style="@style/DefaultButtonStyle"
+            android:layout_marginTop="@dimen/buttonsMargin"
+            android:text="@string/progressCustomStyle"
+            app:backgroundTint="@color/deepPurple" />
+
+    </LinearLayout>
+
+</ScrollView>
